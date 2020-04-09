@@ -2,7 +2,6 @@ package il.ac.afeka.tomco.a10242_cookeat.Network;
 
 public class Constants {
 
-    public static final String FIREBASE_API_KEY = "AIzaSyApeYn3lqA0aBJzQPboMyLM094pFk41hW8";
     public static final String READY_IN = "Ready in ";
     public static final String HOURS = " Hours ";
     public static final String MINUTES = " Minutes";
