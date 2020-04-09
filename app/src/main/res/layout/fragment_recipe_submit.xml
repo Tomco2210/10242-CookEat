@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/submitRecipeSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/srfRecipeImageIV"
+                android:layout_width="0dp"
+                android:layout_height="255dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/image_not_available" />
+
+            <Button
+                android:id="@+id/srfTakePictureIBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:drawableStart="@drawable/ic_menu_camera"
+                android:text="@string/capture"
+                app:layout_constraintEnd_toStartOf="@+id/submitFragmentGuidline50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/srfRecipeImageIV" />
+
+            <Button
+                android:id="@+id/srfSelectImageIBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:drawableStart="@drawable/ic_menu_gallery"
+                android:text="@string/select_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/submitFragmentGuidline50"
+                app:layout_constraintTop_toBottomOf="@+id/srfRecipeImageIV" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/submitFragmentGuidline50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <EditText
+                android:id="@+id/srfRecipeNameET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Recipe Name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/srfSelectImageIBtn" />
+
+            <TextView
+                android:id="@+id/srfRecipePrepTimeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=" Preparation Time :"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/srfReadyInTimeET"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/srfReadyInTimeET" />
+
+            <EditText
+                android:id="@+id/srfReadyInTimeET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toStartOf="@+id/srfMinutesTV"
+                app:layout_constraintStart_toEndOf="@+id/srfRecipePrepTimeTV"
+                app:layout_constraintTop_toBottomOf="@+id/srfRecipeNameET" />
+
+            <TextView
+                android:id="@+id/srfMinutesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Minutes"
+                app:layout_constraintBottom_toBottomOf="@+id/srfReadyInTimeET"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/srfReadyInTimeET" />
+
+            <TextView
+                android:id="@+id/srfRecipeMealTypeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=" Cuisine :"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/srfCuisineSP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/srfCuisineSP" />
+
+            <Spinner
+                android:id="@+id/srfCuisineSP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/srfRecipeMealTypeTV"
+                app:layout_constraintTop_toBottomOf="@+id/srfReadyInTimeET" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/IngredientsLV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/IngTitleTV" />
+
+            <EditText
+                android:id="@+id/ingredientET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:hint="Enter Ingredient..."
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/IngredientsLV" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/submitFragmentGuidline20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2" />
+
+            <Button
+                android:id="@+id/srfAddIngredientBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:drawableLeft="@drawable/ic_add_black_24dp"
+                android:text="Add Ingredient..."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredientET" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/EquipmentLV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EquipmentTitleTV" />
+
+            <EditText
+                android:id="@+id/equipmentET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:hint="Enter Equipment..."
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EquipmentLV" />
+            <Button
+                android:id="@+id/srfAddEquipmentBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:drawableLeft="@drawable/ic_add_black_24dp"
+                android:text="Add Equipment..."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/equipmentET" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/InstructionsLV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/InstTitleTV" />
+
+            <EditText
+                android:id="@+id/instructionInstructionET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Enter Instruction..."
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/InstructionsLV" />
+
+            <Button
+                android:id="@+id/srfAddInstructionBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:drawableLeft="@drawable/ic_add_black_24dp"
+                android:text="Add Instruction..."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructionInstructionET" />
+
+            <TextView
+                android:id="@+id/IngTitleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" Ingredients:"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/srfCuisineSP" />
+            <TextView
+                android:id="@+id/EquipmentTitleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" Equipment:"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/srfAddIngredientBtn" />
+            <TextView
+                android:id="@+id/InstTitleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" Instructions:"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/srfAddEquipmentBtn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/submitRecipeSV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

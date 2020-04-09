@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="@string/menu_search" />
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/menu_favorites" />
+        <item
+            android:id="@+id/nav_submit"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="@string/menu_recipe_submit" />
+
+    </group>
+
+    <item android:title="@string/menu_auth_title">
+        <menu>
+            <item
+                android:id="@+id/nav_auth"
+                android:icon="@drawable/ic_assignment_ind_black_24dp"
+                android:onClick="auth"
+                android:title="@string/menu_auth_up_in" />
+
+        </menu>
+    </item>
+
+</menu>

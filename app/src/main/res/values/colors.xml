@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
+    <color name="colorAccent">#FF6600</color>
+
+    <color name="red_500">#F44336</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="red_A700">#D50000</color>
+    <color name="blue_grey_50">#ECEFF1</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+</resources>
+

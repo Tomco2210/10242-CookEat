@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="il.ac.afeka.tomco.a10242_cookeat.ui.Home.CategoriesFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_categories" />
+
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="il.ac.afeka.tomco.a10242_cookeat.ui.recipe_list.RecipeListFragment"
+        android:label="@string/menu_favorites"
+        tools:layout="@layout/fragment_recipe_list" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="il.ac.afeka.tomco.a10242_cookeat.ui.Search.SearchFragment"
+        android:label="@string/menu_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/nav_submit"
+        android:name="il.ac.afeka.tomco.a10242_cookeat.ui.Submit.SubmitRecipeFragment"
+        android:label="@string/menu_recipe_submit"
+        tools:layout="@layout/fragment_recipe_submit" />
+
+    <fragment
+        android:id="@+id/nav_recipe_list"
+        android:name="il.ac.afeka.tomco.a10242_cookeat.ui.recipe_list.RecipeListFragment"
+        tools:layout="@layout/fragment_recipe_list" />
+
+    <fragment
+        android:id="@+id/nav_recipe"
+        android:name="il.ac.afeka.tomco.a10242_cookeat.ui.RecipeFragment.RecipeFragment"
+        tools:layout="@layout/fragment_recipe" />
+
+</navigation>
